@@ -1,7 +1,11 @@
 ## RNA sequence tutorial
 
-Method sections explaining transcriptome analysis aren't so easy to replicate sometimes because it doesn't explain ***how to install softwares.*** I thought it will benefit some of you who don't know where to start.
+This tutorial is perfect if you are:
 
-This tutorial will use *Drosophila melanogaster* as the model organism!
+* just starting bioinformatics and want to learn how to install necessary softwares
+* currently paying to convert fastq into read count files but want to do it for free
+* have many samples you want to analyze and want to do it fast & automatically
+
+We will use *Drosophila melanogaster* as the model organism.
 
 Visit the [Wiki page](https://github.com/naoto-hikawa/RNAseq_tutorial/wiki) now to get started!
