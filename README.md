@@ -1,11 +1,11 @@
 ## RNA sequence tutorial
 
-This tutorial is perfect if you are:
+This tutorial is perfect if:
 
-* just starting bioinformatics and want to learn how to install necessary softwares
-* want to replicate someone else's data on your own
-* currently paying to convert fastq into read count files but want to do it for free
-* have many samples you want to analyze and want to do it fast & automatically
+* you are just starting bioinformatics and you want to learn how to install necessary softwares
+* you want to replicate someone else's data on your own
+* you are currently paying to convert fastq into read count files but you want to do it for free
+* you have many samples you want to analyze and you want to do it fast & automatically
 
 We will use *Drosophila melanogaster* as the model organism.
 
