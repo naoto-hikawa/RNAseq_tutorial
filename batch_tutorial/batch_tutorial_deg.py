@@ -107,7 +107,7 @@ for file_name in sample_names:
     bam_list = bam_list + sorted_bam + " "
 
 # when all STAR and indexing are done, define where to put read count files
-read_dir = work_dir + "/results/batch/read_counts"
+read_dir = SEQ_HOME + "/downstream_practice/results/batch/read_counts"
 
 # make directory if it does not exist
 if os.path.exists(read_dir):
