@@ -1,4 +1,4 @@
-# RNA sequence tutorial
+# RNA sequence tutorial: the basics
 
 ### This tutorial is perfect if:
 
