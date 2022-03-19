@@ -93,3 +93,6 @@ GSEASig <- subset(GSEASig, baseMean >= 10)
 
 GSEA_DEG =paste(name, "_GSEA_DEG.txt", sep="")
 write.table(GSEASig[1:10], file=paste("results/", GSEA_DEG, sep=""), sep="\t", append=F, quote=F, row.names=F)
+
+
+### Code written by Naoto Hikawa, 2022.03.19
