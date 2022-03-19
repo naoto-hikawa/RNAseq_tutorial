@@ -49,3 +49,5 @@ c_ordered<-c[order(c$Geneid),]
 
 # Write the cleaner version to the working directory
 write.table(c_ordered, "cleaner.txt", sep="\t", append=F, quote=F, row.names=F)
+
+### Code written by Naoto Hikawa, 2022.03.18
