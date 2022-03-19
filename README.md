@@ -16,3 +16,7 @@ We will use *Drosophila melanogaster* as the model organism. The modules are in 
 
 
 ### Visit the [Wiki page](https://github.com/naoto-hikawa/RNAseq_tutorial/wiki) now to get started!
+
+***
+***Disclaimer***
+This tutorial was motivated by my own experience of struggling to build an RNA-seq pipeline, and is not intended to be the "correct" solution to everything. My preferred language of coding is Java, so if you find any mistakes in Python or R files, please let me know! 
