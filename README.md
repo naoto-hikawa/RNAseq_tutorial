@@ -21,4 +21,4 @@ We will use *Drosophila melanogaster* as the model organism. The modules are in 
 
 ***Disclaimer***
 
-This tutorial was motivated by my own experience of struggling to build an RNA-seq pipeline, and is not intended to be the "correct" solution for everything; I used the combination of STAR align + featureCounts for the fast processing. Also, my preferred coding language is Java, so if you find any mistakes in Python, R, or bash scripts I provided, please let me know! 
+This tutorial was motivated by my own experience of struggling to build an RNA-seq pipeline, and is not intended to be the "correct" solution for everything; I used the combination of STAR align + featureCounts for the fast processing. My preferred coding language is Java, so if you find any mistakes in Python, R, or bash scripts I provided, please let me know! 
