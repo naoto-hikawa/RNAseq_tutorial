@@ -59,8 +59,8 @@ resSIG_FC <- subset(resSig, abs(log2FoldChange) > 0.58)
 # Write all DEGs to text and R data file
 DEG_res=paste(name, "_all_DEGs.txt", sep="")
 DEG_res_rda=paste(name, "_all_DEGs.rda", sep="")
-write.table(resOrdered, file=paste("deg_results/", DEG_res, sep=""), sep="\t", append=F, quote=F, row.names=F)
-save(resOrdered, file=paste("deg_results/", DEG_res_rda, sep=""))
+write.table(resSig, file=paste("deg_results/", DEG_res, sep=""), sep="\t", append=F, quote=F, row.names=F)
+save(resSig, file=paste("deg_results/", DEG_res_rda, sep=""))
 
 # Write DEGs with absolute Fold Change > 1.5
 sig_FC=paste(name, "_DEGs_FC.txt", sep="")
