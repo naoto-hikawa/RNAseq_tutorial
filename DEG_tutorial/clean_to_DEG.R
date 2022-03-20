@@ -80,16 +80,14 @@ DESeq2_normalize <- cbind(data_geneid, DESeq2_normalize)
 normalized_file=paste(name, "_normalized.txt", sep="")
 write.table(DESeq2_normalize, file=paste("results/", normalized_file, sep=""), sep="\t", append=F, quote=F, row.names=F) 
 
-# Create file suited for GSEA, filter DEGs only
-GSEA = data.frame(matrix(nrow=nrow(DESeq2_normalize), ncol = 0))
-GSEA$Geneid <- DESeq2_normalize$ANNOTATION_ID
-GSEA$description <- DESeq2_normalize$SYMBOL
+# Create file suited for GSEA, filter expressed genes only
+GSEA = data.frame(matrix(nrow=nrow(all_stats), ncol = 0))
+GSEA$Geneid <- all_stats$ANNOTATION_ID
+GSEA$description <- all_stats$SYMBOL
 GSEA <- cbind(GSEA, DESeq2_normalize[4:11])
-GSEA$padj <- all_stats$padj
 GSEA$baseMean <- all_stats$baseMean
 
-GSEASig <- subset(GSEA, padj < 0.05) 
-GSEASig <- subset(GSEASig, baseMean >= 10)
+GSEASig <- subset(GSEA, baseMean >= 10)
 
 GSEA_DEG =paste(name, "_GSEA_DEG.txt", sep="")
 write.table(GSEASig[1:10], file=paste("results/", GSEA_DEG, sep=""), sep="\t", append=F, quote=F, row.names=F)
