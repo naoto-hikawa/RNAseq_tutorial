@@ -18,8 +18,8 @@ count <- as.matrix(c)
 group <- data.frame(con = factor(c(rep("Group1", 4), rep("Group2", 4))))  #Change here
 
 # DESeq analysis
-dds <- DESeqDataSetFromMatrix(countData = count, colData = group, design = ~con) 
-dds <- DESeq(dds,fitType='local')
+deseq <- DESeqDataSetFromMatrix(countData = count, colData = group, design = ~con) 
+deseq <- DESeq(deseq,fitType='local')
 
 # Conversion table of Flybase ID, gene symbol, and CG numbers
 data_geneid <- rownames(c)
@@ -40,7 +40,7 @@ data_geneid <- cbind(data_geneid, df_conversion)
 colnames(data_geneid) <- c("GENE_ID", "SYMBOL", "ANNOTATION_ID")
 
 # Extract result information
-res <- results(dds, cooksCutoff=F, independentFiltering = F)
+res <- results(deseq, cooksCutoff=F, independentFiltering = F)
 
 # Bind the geneid table with results
 all_stats <- cbind(data_geneid, res)
@@ -75,7 +75,7 @@ sig_FC_down=paste(name, "_DEGs_FC_down.txt", sep="")
 write.table(resSIG_FC_down, file=paste("results/", sig_FC_down, sep=""), sep="\t", append=F, quote=F, row.names=F)
 
 # Create normalized count data file
-DESeq2_normalize <- counts(dds, normalized=TRUE) 
+DESeq2_normalize <- counts(deseq, normalized=TRUE) 
 DESeq2_normalize <- cbind(data_geneid, DESeq2_normalize)
 normalized_file=paste(name, "_normalized.txt", sep="")
 write.table(DESeq2_normalize, file=paste("results/", normalized_file, sep=""), sep="\t", append=F, quote=F, row.names=F) 
@@ -94,5 +94,4 @@ GSEASig <- subset(GSEASig, baseMean >= 10)
 GSEA_DEG =paste(name, "_GSEA_DEG.txt", sep="")
 write.table(GSEASig[1:10], file=paste("results/", GSEA_DEG, sep=""), sep="\t", append=F, quote=F, row.names=F)
 
-
-### Code written by Naoto Hikawa, 2022.03.19
+### Code written/edited by Naoto Hikawa, 2022.03.20
